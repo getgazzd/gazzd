@@ -1,0 +1,18 @@
+name: 'Checkout latest release'
+description: 'Checkouts the latest release based on tag'
+runs:
+    using: 'composite'
+    steps:
+        - name: get latest release with tag
+          shell: bash
+          id: latestrelease
+          run: echo "::set-output name=releasetag::$(git describe --tags `git rev-list --tags --max-count=1`)"
+
+        - name: confirm release tag
+          shell: bash
+          run: echo ${{ steps.latestrelease.outputs.releasetag }}
+
+        - name: Checkout latest release
+          uses: actions/checkout@v3
+          with:
+              ref: ${{ steps.latestrelease.outputs.releasetag }}

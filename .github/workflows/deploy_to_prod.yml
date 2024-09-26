@@ -1,0 +1,32 @@
+name: Deploy to prod
+
+on:
+  repository_dispatch:
+  release:
+    types: [published]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Checkout latest release
+        uses: ./.github/actions/checkout-latest-release
+
+      - name: Deploy release to production
+        uses: amondnet/vercel-action@v20
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          vercel-org-id: ${{ secrets.ORG_ID}}
+          scope: ${{ secrets.ORG_ID}}
+          vercel-project-id: ${{ secrets.PROJECT_ID}}
+          vercel-args: --prod
+          working-directory: ./
+          alias-domains: |
+            gazzd.vercel.app
+            gazzd.com

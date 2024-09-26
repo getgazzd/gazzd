@@ -1,0 +1,154 @@
+@font-face {
+  font-family: "Frank";
+  font-weight: 400;
+  src: url(https://gazzd.com/fonts/Frank/frank-regular-webfont.woff)
+    format("woff");
+}
+.widget-AlertBox {
+  position: relative;
+}
+body,
+html {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: "Frank" !important;
+}
+h1,
+p {
+  margin: 0;
+  padding: 0;
+  font-family: "Frank" !important;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 1);
+}
+h1 {
+  transform: translateY(-122px);
+  font-size: 38px;
+  color: #fff;
+  font-weight: 500;
+}
+p {
+  font-size: 22px;
+  transform: translateX(150%);
+  animation: rollText 10s linear infinite;
+  white-space: nowrap;
+}
+/*################################# ##### COLORS PRODUCTS START ##### #################################*/
+p > span#livid_lime,
+span#livid_lime_x_24 {
+  color: #3c3;
+}
+p > span#atomic_apple {
+  color: #9f3;
+}
+p > span#blueberry_blizz {
+  color: #34f;
+}
+p > span#loco_lemon {
+  color: #ff2;
+}
+p > span#midsummer_melon {
+  color: #f36;
+}
+p > span#pesky_pineapple {
+  color: #f90;
+}
+p > span#cheeky_cocolate {
+  color: #630;
+}
+p > span#streaking_strawberries {
+  color: #f33;
+}
+p > span#vanilla_villain_coco {
+  color: #ffc;
+}
+p > span#gpunkt_bundle {
+  color: #9146ff;
+}
+p > span#jewanderz_bundle {
+  color: #e16308;
+}
+/*################################# ##### COLORS PRODUCTS END ####### #################################*/
+#wrap {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+#alert-box {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+#alert-box.hidden,
+.hidden {
+  opacity: 0;
+}
+#alert-text {
+  padding: 20px;
+  text-shadow: 0px 0px 1px #000, 0px 0px 2px #000, 0px 0px 3px #000,
+    0px 0px 4px #000, 0px 0px 5px #000;
+}
+#alert-message,
+#alert-user-message {
+  text-align: center;
+}
+#alert-user-message img {
+  vertical-align: middle;
+  height: 1em;
+}
+#alert-image {
+  position: relative;
+  transform: scale(1.4);
+}
+#alert-image video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#alert-message > span > span {
+  display: inline-block;
+}
+#alert-message {
+  opacity: 0;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+}
+#alert-image {
+  z-index: 6;
+  position: relative;
+}
+#alert-text {
+  z-index: 6;
+  position: relative;
+}
+#alert-text-wrap {
+  z-index: 6;
+  position: relative;
+}
+#scroll-box {
+  width: 630px;
+  margin: auto;
+  overflow: hidden;
+  transform: translateY(-96px);
+}
+@keyframes rollText {
+  0% {
+    transform: translateX(150%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
