@@ -11,7 +11,7 @@ export const MetaPixel = () => {
         .then((currReactPixel) => {
           ReactPixel = currReactPixel;
           console.debug("[ReactPixel]: Init");
-          ReactPixel.init(`400588702625516`);
+          ReactPixel.init(`891494069704943`);
           ReactPixel.pageView();
         });
     }
