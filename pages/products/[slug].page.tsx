@@ -19,8 +19,10 @@ interface Props {
 
 const ProductPage = ({ product }: Props) => {
   useEffect(() => {
-    fbPixelViewContent(product);
-  }, []);
+    if (product) {
+      fbPixelViewContent(product);
+    }
+  }, [product]);
 
   if (!product.contentfulProduct) {
     console.error(
