@@ -175,7 +175,7 @@ const FooterContent = () => {
           </div>
           <div className="flex flex-col">
             <h5>
-              {new Date().getFullYear()}, {t("GAZZD AB ALL RIGHTS RESERVED")}
+              {new Date().getFullYear()}, {t("GAZZD AB ALL RIGHTS RESERVED!")}
             </h5>
             <div>
               <Image
