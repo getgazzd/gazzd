@@ -11,7 +11,7 @@ export const MetaPixel = () => {
         .then((currReactPixel) => {
           ReactPixel = currReactPixel;
           console.debug("[ReactPixel]: Init");
-          ReactPixel.init(process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID);
+          ReactPixel.init(`891494069704943`);
           ReactPixel.pageView();
         });
     }
