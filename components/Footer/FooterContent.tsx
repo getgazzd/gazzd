@@ -69,7 +69,7 @@ const FooterContent = () => {
         <div className="flex flex-col justify-between px-16 pb-16 md:flex-row ">
           <div className="flex flex-col md:flex-row md:space-x-16">
             <h5>
-              {new Date().getFullYear()}, {t("GAZZD AB ALL RIGHTS RESERVED")}
+            {new Date().getFullYear()}, {t("GAZZD AB ALL RIGHTS RESERVED!")}
             </h5>
             {/* Disabled for now
             <Link href="/page/privacy-policy" passHref>
@@ -175,7 +175,7 @@ const FooterContent = () => {
           </div>
           <div className="flex flex-col">
             <h5>
-              {new Date().getFullYear()}, {t("GAZZD AB ALL RIGHTS RESERVED")}
+            {new Date().getFullYear()}, {t("GAZZD AB ALL RIGHTS RESERVED!")}
             </h5>
             <div>
               <Image
