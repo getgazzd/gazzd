@@ -7,13 +7,16 @@ export const MetaPixel = () => {
   useEffect(() => {
     if (!ReactPixel) {
       import("react-facebook-pixel")
-        .then((x) => x.default)
-        .then((currReactPixel) => {
-          ReactPixel = currReactPixel;
+        .then((module) => {
+          ReactPixel = module.default;
           console.debug("[ReactPixel]: Init");
           ReactPixel.init(`891494069704943`);
           ReactPixel.pageView();
+        }).catch((error) => {
+          console.log("[ReactPixel]: Unable to init", error);
         });
+    } else {
+      ReactPixel.pageView();
     }
   }, []);
 
